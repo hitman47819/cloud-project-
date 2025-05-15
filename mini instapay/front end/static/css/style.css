@@ -1,0 +1,121 @@
+/* General Page Styles */
+body {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Card Styles */
+.card {
+    border-radius: 15px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+/* Table Hover Effects */
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+}
+
+/* Alert Styles */
+.alert {
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* Button Styles */
+.btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+    .btn-lg:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+/* Navbar Styles */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    background: linear-gradient(to right, #007bff, #6610f2);
+}
+
+    /* Navbar Link Styles */
+    .navbar .nav-link,
+    .navbar .navbar-brand {
+        transition: color 0.3s ease;
+    }
+
+        .navbar .nav-link:hover,
+        .navbar .navbar-brand:hover {
+            color: #ffd700 !important;
+        }
+
+/* Card Header Styles */
+.card-header {
+    border-radius: 15px 15px 0 0 !important;
+    background: #007bff;
+    color: white;
+}
+
+/* Table Styles */
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .table thead th {
+        background-color: #4a90e2;
+        color: white;
+        border-bottom: none;
+    }
+
+/* Fade-In Animation */
+.fade-in {
+    animation: fadeInUp 0.6s ease both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 20px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Button Colors */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+    .btn-secondary:hover {
+        background-color: #5a6268;
+        border-color: #545b62;
+    }
+
+/* Miscellaneous Enhancements */
+.nav-item {
+    font-weight: 500;
+}

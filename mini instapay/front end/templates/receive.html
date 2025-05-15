@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Receive Money{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Receive Money</h1>
+    <p>Share your email with the sender so they can transfer money to your account.</p>
+    <p><strong>Your Email:</strong> {{ session.get('user_email') }}</p>
+
+    {% if transactions and transactions|length > 0 %}
+    <table class="table">
+        <thead>
+            <tr><th>From</th><th>Amount</th><th>Date</th></tr>
+        </thead>
+        <tbody>
+            {% for tx in transactions %}
+            <tr>
+                <td>{{ tx.get('sender_id', 'Unknown') }}</td>
+                <td>${{ '%.2f'|format(tx.get('amount', 0)) }}</td>
+                <td>{{ tx.get('date', 'N/A') }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div class="alert alert-info">No incoming transactions yet.</div>
+    {% endif %}
+</div>
+{% endblock %}

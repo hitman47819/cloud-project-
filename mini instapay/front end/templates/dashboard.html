@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8 offset-md-2">
+        <div class="card shadow">
+            <div class="card-header bg-info text-white">
+                <h3 class="mb-0">Account Overview</h3>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card mb-3">
+                            <div class="card-body">
+                                <h5 class="card-title">Current Balance</h5>
+                                <h2 class="text-success">${{ "%.2f"|format(balance) }}</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="d-grid gap-2">
+                            <a href="{{ url_for('send') }}" class="btn btn-primary btn-lg">
+                                <i class="bi bi-send"></i> Send Money
+                            </a>
+                            <a href="{{ url_for('receive') }}" class="btn btn-secondary btn-lg">
+                                <i class="bi bi-arrow-down-circle"></i> Receive Money
+                            </a>
+                            <a href="{{ url_for('deposit') }}" class="btn btn-success btn-lg">
+                                <i class="bi bi-wallet"></i> Deposit Money
+                            </a>
+                            <a href="{{ url_for('history') }}" class="btn btn-secondary btn-lg">
+                                <i class="bi bi-clock-history"></i> Transaction History
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
